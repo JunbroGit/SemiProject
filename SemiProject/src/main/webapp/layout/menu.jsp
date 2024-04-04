@@ -150,7 +150,7 @@
     </ul>
   </li>
   <li><a href="#">먹거리</a></li>
-  <li><a href="#">숙박시설</a></li>
+  <li><a href="index.jsp?main=hotel/hotelmain.jsp">숙박시설</a></li>
   <li><a href="#">커뮤니티</a></li>
  <!--  <li><a href="#">Contact Us</a></li> -->
 </ul>
