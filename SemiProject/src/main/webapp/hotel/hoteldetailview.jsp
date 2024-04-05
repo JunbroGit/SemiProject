@@ -23,6 +23,10 @@
    i.globe{
    color: green;
    }
+   
+   i.flower{
+   color: pink;
+   }
 </style>
 </head>
 <%
@@ -74,7 +78,7 @@
                 <h6><i class="bi bi-globe2 globe"></i>  <a href="<%=dto.getH_link()%>" target='_blank' style="color: gray;"><%=dto.getH_link()%></a></h6>
                 <h6><i class="bi bi-geo-alt-fill loc"></i>  <%=dto.getH_location() %></h6>
                   <br>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10995.310051929897!2d135.76283435040858!3d34.98353738017491!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108b2d8af72d9%3A0x7fda8e1546d4df70!2z7JWM66qs7Yq4IO2YuO2FlCDqtZDthqA!5e0!3m2!1sko!2skr!4v1712284343774!5m2!1sko!2skr" width="500" height="310" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="<%=dto.getH_googlemap() %>>" width="500" height="310" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                
                
             </div>

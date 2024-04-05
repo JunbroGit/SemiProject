@@ -1,3 +1,4 @@
+<%@page import="data.dao.SemiMemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,8 +13,11 @@
 </head>
 <body>
 <%
-	session.removeAttribute("loginok");
-	
+   session.removeAttribute("loginok");
+String myid=(String)session.getAttribute("myid");
+
+
+
 	response.sendRedirect("../index.jsp");
 %>
 </body>

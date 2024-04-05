@@ -14,6 +14,16 @@ public class HotelDto {
 	private String h_category;
 	
 	private Timestamp h_writeday;
+	
+	private String h_googlemap;
+
+	public String getH_googlemap() {
+		return h_googlemap;
+	}
+
+	public void setH_googlemap(String h_googlemap) {
+		this.h_googlemap = h_googlemap;
+	}
 
 	public String getH_num() {
 		return h_num;

@@ -20,7 +20,7 @@ public class HotelDao {
 			Connection conn  = db.getConnection();
 			PreparedStatement pstmt =null;
 
-			String sql ="insert into hotel values(null,?,?,?,?,?,now())";
+			String sql ="insert into hotel values(null,?,?,?,?,?,?,now())";
 
 
 			try {
@@ -32,7 +32,7 @@ public class HotelDao {
 				pstmt.setString(3, dto.getH_image());
 				pstmt.setString(4, dto.getH_location());
 				pstmt.setString(5, dto.getH_category());
-				
+				pstmt.setString(6, dto.getH_googlemap());
 
 				pstmt.execute();
 
@@ -74,6 +74,7 @@ public class HotelDao {
 					dto.setH_link(rs.getString("h_link"));
 					dto.setH_category(rs.getString("h_category"));
 					dto.setH_writeday(rs.getTimestamp("h_writeday"));
+					dto.setH_googlemap(rs.getString("h_googlemap"));
 					
 
 					list.add(dto);
@@ -117,6 +118,8 @@ public class HotelDao {
 					dto.setH_link(rs.getString("h_link"));
 					dto.setH_category(rs.getString("h_category"));
 					dto.setH_writeday(rs.getTimestamp("h_writeday"));
+					dto.setH_googlemap(rs.getString("h_googlemap"));
+					
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

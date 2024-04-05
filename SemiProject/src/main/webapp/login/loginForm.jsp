@@ -24,8 +24,9 @@ div.logform {
 
 <%
 	//세션으로부터 아이디와 체크값을 얻는다
-	String myid=(String)session.getAttribute("idok");
+	String myid=(String)session.getAttribute("myid");
 	String saveid=(String)session.getAttribute("saveok");
+
 	
 	boolean save=true;
 	

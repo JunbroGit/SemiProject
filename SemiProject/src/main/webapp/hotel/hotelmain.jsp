@@ -98,8 +98,10 @@
                    
                      <a h_num="<%=dto.getH_num()%>" h_category=<%=dto.getH_category() %> style="cursor: pointer;" class="goDetail">
                         <img alt="" src="hotel/image_hotel/<%=dto.getH_image()%>" class="photo">
+                        
                         <br>
                         <%=dto.getH_content() %><br></a>
+                        
                      
                         <span style="float: right;">
                            <div style="color: gray; font-size: 12px;">
