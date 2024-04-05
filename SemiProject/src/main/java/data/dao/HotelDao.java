@@ -90,7 +90,44 @@ public class HotelDao {
 		}
 
 		
-		
+	   //데이터 받기
+		public HotelDto getHotel(String h_num)
+		{
+
+			HotelDto dto = new HotelDto();
+			
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select * from hotel where h_num=?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, h_num);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next())
+				{
+					dto.setH_num(rs.getString("h_num"));
+					dto.setH_subject(rs.getString("h_subject"));
+					dto.setH_content(rs.getString("h_content"));
+					dto.setH_image(rs.getString("h_image"));
+					dto.setH_location(rs.getString("h_location"));
+					dto.setH_link(rs.getString("h_link"));
+					dto.setH_category(rs.getString("h_category"));
+					dto.setH_writeday(rs.getTimestamp("h_writeday"));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			
+			return dto;
+		}
 		
 
 }
