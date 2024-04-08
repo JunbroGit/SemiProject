@@ -19,7 +19,7 @@
    
    width: 400px;
    height: 230px;
-   border: 1px solid gray;
+   border: 0px solid gray;
    margin-bottom: 10px;
    }
    
@@ -86,14 +86,13 @@
     <div id="tabs-total" class="container tab-pane active"><br>
       <h3>전체</h3>
       <p>
-        <table class="shoptable table table-bordered" style="width: 500px;">
+        <table class="shoptable table " style="width: 500px;">
            <tr>
               <%
                  int i=0;
                 for(HotelDto dto: list)
                 {
-                   //20~50까지 난수발생
-                   int sale=(int)(Math.random()*31)+20;
+                   
                    %>
                    <td>
                    
@@ -104,10 +103,7 @@
                         <%=dto.getH_content() %><br></a>
                         
                      
-                        <span style="float: right;">
-                           <div style="color: gray; font-size: 12px;">
-                           
-                        </span>
+                       
                      
                    </td>
                    
@@ -134,7 +130,7 @@
      <div id="tabs-hotel" class="container tab-pane fade"><br>
       <h3>호텔</h3>
       <p>
-      <table class="shoptable table table-bordered" style="width: 500px;">
+      <table class="shoptable table " style="width: 500px;">
            <tr>
               <%
                   i=0;
@@ -142,8 +138,7 @@
                 {
                    
                    if(dto.getH_category().equals("hotel")){
-                   //20~50까지 난수발생
-                   int sale=(int)(Math.random()*31)+20;
+                 
                    %>
                    <td>
                      <a h_num="<%=dto.getH_num()%>" h_category=<%=dto.getH_category() %> style="cursor: pointer;" class="goDetail">
@@ -151,10 +146,7 @@
                         <br>
                         <%=dto.getH_content() %><br></a>
                      
-                        <span style="float: right;">
-                           <div style="color: gray; font-size: 12px;">
-                           
-                        </span>
+
                      
                    </td>
                    
@@ -180,7 +172,7 @@
     <div  id="tabs-ryokan" class="container tab-pane fade"><br>
       <h3>료칸</h3>
       <p>
-        <table class="shoptable table table-bordered" style="width: 500px;">
+        <table class="shoptable table" style="width: 500px;">
            <tr>
               <%
                   i=0;
@@ -188,19 +180,14 @@
                 {
                    
                    if(dto.getH_category().equals("ryokan")){
-                   //20~50까지 난수발생
-                   int sale=(int)(Math.random()*31)+20;
+
                    %>
                    <td>
                      <a h_num="<%=dto.getH_num()%>" h_category=<%=dto.getH_category() %> style="cursor: pointer;" class="goDetail">
                         <img alt="" src="hotel/image_hotel/<%=dto.getH_image()%>" class="photo">
                         <br>
                         <%=dto.getH_content()%><br></a>
-                     
-                        <span style="float: right;">
-                           <div style="color: gray; font-size: 12px;">
-                           
-                        </span>
+ 
                      
                    </td>
                    
