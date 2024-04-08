@@ -70,13 +70,13 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" data-bs-toggle="tab" href="#tabs-total">전체</a>
+      <a class="nav-link active" data-bs-toggle="tab" href="#tabs-total" style="text-decoration: none; color: gray;">전체</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#tabs-hotel">호텔</a>
+      <a class="nav-link" data-bs-toggle="tab" href="#tabs-hotel" style="text-decoration: none; color: gray;">호텔</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#tabs-ryokan">료칸</a>
+      <a class="nav-link" data-bs-toggle="tab" href="#tabs-ryokan" style="text-decoration: none; color: gray;">료칸</a>
     </li>
     
   </ul>
@@ -84,7 +84,7 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div id="tabs-total" class="container tab-pane active"><br>
-      <h3>전체</h3>
+      <h3 >전체</h3>
       <p>
         <table class="shoptable table " style="width: 500px;">
            <tr>

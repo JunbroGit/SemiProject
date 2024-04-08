@@ -42,7 +42,7 @@
 		
 		if(loginok==null)
 		{%>
-			<a href="index.jsp?main=login/loginForm2.jsp"><i class="bi bi-door-open fs-2"></i></a>
+			<a href="index.jsp?main=login/loginForm3.jsp"><i class="bi bi-door-open fs-2"></i></a>
 	    	<a href="index.jsp?main=member/addform.jsp"><i class="bi bi-person-plus fs-2"></i></a>	
 		<%}else{%>
 			<b style="font-size: 15pt; color: gray;"><%=name %>님 로그인상태..</b>

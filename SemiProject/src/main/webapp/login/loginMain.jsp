@@ -16,7 +16,7 @@
 	String loginok=(String)session.getAttribute("loginok");
 	if(loginok==null)
 	{%>
-		<jsp:include page="loginForm2.jsp"/>
+		<jsp:include page="loginForm3.jsp"/>
 	<%}else{%>
 			 <jsp:include page="../index.jsp"/>
 	<%}
