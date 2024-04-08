@@ -61,6 +61,7 @@
   HotelDao dao=new HotelDao();
   List<HotelDto> list=dao.getAllHotels();
   NumberFormat nf=NumberFormat.getCurrencyInstance();
+  
 
 %>
 <body>
@@ -191,7 +192,7 @@
                    int sale=(int)(Math.random()*31)+20;
                    %>
                    <td>
-                     <a h_num="<%=dto.getH_num()%>" style="cursor: pointer;" class="goDetail">
+                     <a h_num="<%=dto.getH_num()%>" h_category=<%=dto.getH_category() %> style="cursor: pointer;" class="goDetail">
                         <img alt="" src="hotel/image_hotel/<%=dto.getH_image()%>" class="photo">
                         <br>
                         <%=dto.getH_content()%><br></a>

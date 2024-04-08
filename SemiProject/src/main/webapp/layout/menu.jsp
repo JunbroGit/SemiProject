@@ -131,7 +131,7 @@ color: pink
       <li><a href="#">Sub Menu 5</a></li>
     </ul>
   </li>
-  <li><a href="#">교토 소개</a>
+  <li><a href="index.jsp?main=intro/intromain.jsp">교토 소개</a>
     <ul>
       <li><a href="#">Sub Menu 1</a></li>
       <li><a href="#">Sub Menu 2</a></li>

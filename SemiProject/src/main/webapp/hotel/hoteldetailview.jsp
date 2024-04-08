@@ -16,16 +16,13 @@
    img.large{
       height: 480px;
    }
+   
    i.loc{
    color: green;
    }
    
    i.globe{
    color: green;
-   }
-   
-   i.flower{
-   color: pink;
    }
 </style>
 </head>
@@ -45,14 +42,14 @@
        
             <div class="col-md-6" style="padding-top: 50px;">
              <div style="color: gray">
-             <a  style="color: gray; text-decoration: none;" href="index.jsp?main=layout/main.jsp">홈></a>
-             <a   style="color: gray; text-decoration: none;" href="index.jsp?main=hotel/hotelmain.jsp">숙박시설></a>
+             <a style="color: gray; text-decoration: none;" href="index.jsp?main=layout/main.jsp">홈></a>
+             <a style="color: gray; text-decoration: none;" href="index.jsp?main=hotel/hotelmain.jsp">숙박시설></a>
              <%
                 if(dto.getH_category().equals("ryokan")){
            
              %>
              
-             <a style="color: gray; text-decoration: none;" href="index.jsp?main=hotel/hotelmain.jsp&listname="+ryokan>료칸</a>
+             <a style="color: gray; text-decoration: none;" href="index.jsp?main=hotel/hotelmain.jsp">료칸</a>
              <% 
              
              }
@@ -62,7 +59,7 @@
            
              %>
              
-             <a  style="color: gray; text-decoration: none;" href="index.jsp?main=hotel/hotelmain.jsp&listname="+hotel>호텔</a>
+             <a style="color: gray; text-decoration: none;" href="index.jsp?main=hotel/hotelmain.jsp">호텔</a>
              <% 
              
              }
@@ -72,13 +69,13 @@
                
             </div>
             <div class="col-md-6" style="padding-top: 30px;">
-                <h1 style="font-weight: bold; "><%=dto.getH_content()%></h1>
+                <h1 style="font-weight: bold; "><%=dto.getH_subject() %></h1>
                 <hr>
-                <h5><%=dto.getH_subject() %></h5>
+                <h5><%=dto.getH_content()%></h5>
                 <h6><i class="bi bi-globe2 globe"></i>  <a href="<%=dto.getH_link()%>" target='_blank' style="color: gray;"><%=dto.getH_link()%></a></h6>
                 <h6><i class="bi bi-geo-alt-fill loc"></i>  <%=dto.getH_location() %></h6>
                   <br>
-                <iframe src="<%=dto.getH_googlemap() %>>" width="500" height="310" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="<%=dto.getH_googlemap() %>" width="500" height="310" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                
                
             </div>
